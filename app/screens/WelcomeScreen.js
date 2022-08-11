@@ -19,8 +19,8 @@ function WelcomeScreen(props) {
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/logo.png")} />
       </View>
-      <AppButton title="login" />
-      <AppButton title="register" />
+      <AppButton title="login" onPress={() => console.log("Tapped")} />
+      <AppButton title="register" onPress={() => console.log("Tapped")} />
     </ImageBackground>
   );
 }
