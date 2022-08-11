@@ -1,18 +1,10 @@
-import { StyleSheet, View, StatusBar } from "react-native";
+import { StyleSheet, View, StatusBar, Text } from "react-native";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 
+import AppText from "./app/components/AppText";
 export default function App() {
-  return <ViewImageScreen />;
+  return <WelcomeScreen />;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    //backgroundColor: "#fff",
-    //alignItems: "center",
-    //justifyContent: "center",
-    //paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
-});
-
-/**<Image source={require("./assets/icon.png")} /> */
+const styles = StyleSheet.create({});

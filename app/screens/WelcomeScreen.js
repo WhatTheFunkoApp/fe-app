@@ -6,6 +6,7 @@ import {
   StatusBar,
   Image,
 } from "react-native";
+import AppButton from "../components/AppButton/AppButton";
 
 import colors from "../config/colors";
 
@@ -18,8 +19,8 @@ function WelcomeScreen(props) {
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/logo.png")} />
       </View>
-      <View style={styles.loginButton}></View>
-      <View style={styles.registerButton}></View>
+      <AppButton title="login" />
+      <AppButton title="register" />
     </ImageBackground>
   );
 }
