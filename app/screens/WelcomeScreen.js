@@ -19,8 +19,10 @@ function WelcomeScreen(props) {
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/logo.png")} />
       </View>
-      <AppButton title="login" onPress={() => console.log("Tapped")} />
-      <AppButton title="register" onPress={() => console.log("Tapped")} />
+      <View style={styles.buttonsContainer}>
+        <AppButton title="login" onPress={() => console.log("Tapped")} />
+        <AppButton title="register" onPress={() => console.log("Tapped")} />
+      </View>
     </ImageBackground>
   );
 }
@@ -31,23 +33,14 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     alignItems: "center",
   },
-
-  loginButton: {
+  buttonsContainer: {
+    padding: 20,
     width: "100%",
-    height: 70,
-    backgroundColor: colors.light_green,
   },
-
   logoContainer: {
     position: "absolute",
     top: 70,
     alignItems: "center",
-  },
-
-  registerButton: {
-    width: "100%",
-    height: 70,
-    backgroundColor: colors.light_green,
   },
 
   logo: {
