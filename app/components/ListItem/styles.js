@@ -4,6 +4,7 @@ import colors from "../../config/colors";
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
+    padding: 15,
   },
 
   image: {
@@ -18,7 +19,7 @@ const styles = StyleSheet.create({
   },
 
   subTitle: {
-    color: colors.light_grey,
+    color: colors.medium_grey,
   },
 });
 
