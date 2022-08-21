@@ -15,6 +15,7 @@ function ListItem({
   onPress,
   renderRightActions,
   style,
+  styleTitle,
 }) {
   return (
     <Swipeable renderRightActions={renderRightActions}>
@@ -23,7 +24,7 @@ function ListItem({
           <View style={styles.IconComponentContainer}>{IconComponent}</View>
           {image && <Image style={styles.image} source={image} />}
           <View style={styles.detailsContainer}>
-            <AppText style={styles.title}>{title}</AppText>
+            <AppText style={[styles.title, styleTitle]}>{title}</AppText>
             {subTitle && <AppText style={styles.subTitle}>{subTitle}</AppText>}
           </View>
         </View>

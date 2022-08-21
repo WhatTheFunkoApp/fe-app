@@ -10,4 +10,5 @@ export default {
   green_turquoise: "#62f0a9",
   medium_green_turquoise: "#70e2a9",
   medium_yellow: "#ffe66d",
+  dark_grey: "#0c0c0c",
 };

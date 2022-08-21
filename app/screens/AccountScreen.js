@@ -30,9 +30,9 @@ function AccountScreen(props) {
       <View style={styles.container}>
         <ListItem
           title="Luco Moro"
-          subTitle="What The Funko POP"
           image={require("../assets/logo.png")}
           style={{ backgroundColor: colors.white }}
+          styleTitle={{ fontSize: 21 }}
         />
       </View>
       <View style={styles.container}>
