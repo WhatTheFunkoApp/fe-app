@@ -3,7 +3,7 @@ import colors from "../../config/colors";
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: colors.light_green,
+    backgroundColor: colors.medium_green_turquoise,
     borderRadius: 25,
     justifyContent: "center",
     alignItems: "center",
