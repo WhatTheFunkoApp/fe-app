@@ -1,11 +1,12 @@
 import { StyleSheet } from "react-native";
 import colors from "../../config/colors";
+import defaultStyles from "../../config/styles";
 
 //import DefaultStyles from "../../config/styles";
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.light_grey,
+    backgroundColor: defaultStyles.colors.light_grey,
     borderRadius: 25,
     flexDirection: "row",
     width: "100%",
@@ -20,6 +21,10 @@ const styles = StyleSheet.create({
   iconContainer: {
     justifyContent: "center",
     alignItems: "center",
+  },
+
+  placeholder: {
+    color: defaultStyles.colors.medium_grey,
   },
 
   text: {
