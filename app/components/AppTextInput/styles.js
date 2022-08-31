@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.light_grey,
     borderRadius: 25,
     flexDirection: "row",
-    width: "100%",
     padding: 15,
     marginVertical: 10,
   },

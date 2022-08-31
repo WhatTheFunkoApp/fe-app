@@ -1,11 +1,12 @@
 import React from "react";
 import { Image, TouchableHighlight, View } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+//Swipable works only on iOS at the moment
+import Swipeable from "react-native-gesture-handler/Swipeable";
+
 import styles from "./styles";
 import AppText from "../AppText";
 import colors from "../../config/colors";
-
-//Swipable works only on iOS at the moment
-import Swipeable from "react-native-gesture-handler/Swipeable";
 
 function ListItem({
   title,
@@ -24,9 +25,20 @@ function ListItem({
           <View style={styles.IconComponentContainer}>{IconComponent}</View>
           {image && <Image style={styles.image} source={image} />}
           <View style={styles.detailsContainer}>
-            <AppText style={[styles.title, styleTitle]}>{title}</AppText>
-            {subTitle && <AppText style={styles.subTitle}>{subTitle}</AppText>}
+            <AppText style={[styles.title, styleTitle]} numberOfLines={1}>
+              {title}
+            </AppText>
+            {subTitle && (
+              <AppText style={styles.subTitle} numberOfLines={2}>
+                {subTitle}
+              </AppText>
+            )}
           </View>
+          <MaterialCommunityIcons
+            name="chevron-right"
+            size={25}
+            color={colors.medium_grey}
+          />
         </View>
       </TouchableHighlight>
     </Swipeable>

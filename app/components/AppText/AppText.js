@@ -4,8 +4,8 @@ import DefaultStyles from "../../config/styles";
 
 import styles from "./styles";
 
-function AppText({ children, style }) {
-  return <Text style={[DefaultStyles.text, style]}>{children}</Text>;
+function AppText({ children, style, ...otherPorps }) {
+  return <Text style={[DefaultStyles.text, style]} {...otherPorps}>{children}</Text>;
 }
 
 export default AppText;
