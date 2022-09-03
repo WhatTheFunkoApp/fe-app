@@ -1,5 +1,14 @@
-import { useState } from "react";
-import { StyleSheet, View, StatusBar, Text, TextInput } from "react-native";
+import { useEffect, useState } from "react";
+import {
+  StyleSheet,
+  Button,
+  View,
+  StatusBar,
+  Text,
+  TextInput,
+  Image,
+} from "react-native";
+import * as ImagePicker from "expo-image-picker";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
@@ -17,51 +26,19 @@ import colors from "./app/config/colors";
 import AppPicker from "./app/components/AppPicker";
 import LoginScreen from "./app/screens/LoginScreen";
 import ListingEditScreen from "./app/screens/ListingEditScreen";
-
-/*const categories = [
-  {
-    label: "Fornuiture",
-    value: 1,
-  },
-  {
-    label: "Clothing",
-    value: 2,
-  },
-  {
-    label: "Cameras",
-    value: 3,
-  },
-];*/
+import ImageInput from "./app/components/ImageInput/ImageInput";
 
 export default function App() {
-  /*const [firstName, setFirstName] = useState("");
+  const [imageUri, setImageUri] = useState();
 
-  const [category, setCategory] = useState(categories[0]);*/
-  return <ListingEditScreen />;
-}
-
-/*
+  return (
     <Screen>
-      <Text>{firstName}</Text>
-      <TextInput
-        onChangeText={(text) => setFirstName(text)}
-        placeholder="First Name"
-        style={{
-          borderBottomColor: "#ccc",
-          borderBottomWidth: 1,
-        }}
+      <ImageInput
+        imageUri={imageUri}
+        onChangeImage={(uri) => setImageUri(uri)}
       />
-    </Screen>*/
-
-/**    <Screen>
-      <AppPicker
-        selectedItem={category}
-        onSelectItem={(item) => setCategory(item)}
-        items={categories}
-        icon="apps"
-        placeholder="Category"
-      />
-      <AppTextInput icon="email" placeholder="Email" />
-    </Screen> */
+    </Screen>
+  );
+}
 
 const styles = StyleSheet.create({});
